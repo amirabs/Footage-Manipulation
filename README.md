@@ -127,3 +127,59 @@ Options:
 ```
 #### What does it do?
 Takes in the stabilized footage and splits it into the number of rectangles and time zones that you would like.
+
+
+### Preprocess subfolder
+This folder contains a number of scripts to apply to the stabilized videos as a recent alternative to using the above splitting code.
+
+#### get_box.py
+requires extract_valid_track.py
+Provided a stabilized video, crop a bounding box from the interior such that there isn't much black at the edges. 
+```
+Usage: python get_box.py input_frames output_frames
+Must modify the input frames and output frames base directory in the get_box.py file.
+```
+#### split_frames.py
+ Splits a video spatially. 
+ ```
+Input: directory of frames, Output: some number of directories where each directory stores a spatial split. Also, contains a method to resize frames, without splitting.
+Must modify the input frames and output frames base directory in the split_frames.py file.
+```
+#### split_frames_wrapper.py
+A wrapper script that calls split_frames.py to split & rescale many videos using a ThreadPool.
+Requires author to generate a split_frames_todo.txt file of the following format:
+frames_directory (x,y) overlap
+e.g:
+bookstore4k-09-29-5pu (2,3) 100 
+bookstore4k-09-29-11a40u (2,3) 100
+bookstore4k-10-5-11a40u (2,2) 200
+bookstore4k-10-06-4p50u (2,2) 200
+bytes4k-09-25-12pu (2,3) 200
+```
+Must modify the paths in this script before usage.
+```
+
+#### rescale_frames_wrapper.py
+ A wrapper script that calls split_frames.py to rescale many videos using a ThreadPool.
+```
+Must modify the paths in this script before usage.
+```
+
+### Postprocess subfolder
+
+#### scratch_reformat.m
+Reformats the annotation.mat files (output by vatic) into a format required by Alex R. This file is saved into obsmat.mat
+
+#### relabelGUI.m/fig
+GUI interface built to facilitate relabeling the objects in the annotations.mat files.
+
+#### alexGUI.m
+A last-minute GUI built to display the trajectories (provided by Alex. R) to generate figures. (not completed)
+
+
+
+
+
+
+
+
