@@ -90,6 +90,7 @@ void split_img( int split_num, int x, int y, int num_x, int num_y, int time_spli
   VideoWriter writer;
   string out_fn = out_dir + "/" + out_key.str() + ".avi"; 
   writer.open(out_fn, CV_FOURCC('m','p','4','v'), capture.get(CV_CAP_PROP_FPS), sz, true);
+  //writer.open(out_fn, CV_FOURCC('m','p','4','v'), 29.97, sz, true);
 
   Mat src;
   Rect rect = Rect( this_x, this_y, this_width, this_height );

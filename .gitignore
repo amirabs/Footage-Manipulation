@@ -1,3 +1,8 @@
 *.avi
 *.mov
 manip_bin
+cv3stab-bma.rb
+new_prev_to_cur_transformation.txt
+prev_to_cur_transformation.txt
+smoothed_trajectory.txt
+trajectory.txt

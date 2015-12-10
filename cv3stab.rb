@@ -12,7 +12,7 @@ require 'epitools'
 VID_IN = Path['/cvgl/group/UAV_data/3-undistort/*'].sort_by{ |x| File.size(x) }
 VID_OUT = '~/stabvideo/'
 
-CMD0 = '/home/jkg/videostab'
+CMD0 = 'manip_bin/tools/videostab'
 
 def what(in_file, out_file)
   puts "--------------------------------------------------------------------------"

@@ -114,6 +114,7 @@ Options:
   -x [ --numx ] arg           number of x splits
   -y [ --numy ] arg           number of y splits
   -t [ --timesplit ] arg (=1) number of time splits
+  -s [ --threads ] arg (=4)   number of threads
   -o [ --output ] arg (=.)    output directory
   -l [ --overlap ] arg (0)    number of pixels to overlap spatially between splits.
 ```
