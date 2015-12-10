@@ -150,10 +150,10 @@ A wrapper script that calls split_frames.py to split & rescale many videos using
 Requires author to generate a split_frames_todo.txt file of the following format:
 frames_directory (x,y) overlap
 e.g:
-bookstore4k-09-29-5pu (2,3) 100 
-bookstore4k-09-29-11a40u (2,3) 100
-bookstore4k-10-5-11a40u (2,2) 200
-bookstore4k-10-06-4p50u (2,2) 200
+bookstore4k-09-29-5pu (2,3) 100\\
+bookstore4k-09-29-11a40u (2,3) 100\\
+bookstore4k-10-5-11a40u (2,2) 200\\
+bookstore4k-10-06-4p50u (2,2) 200\\
 bytes4k-09-25-12pu (2,3) 200
 ```
 Must modify the paths in this script before usage.
