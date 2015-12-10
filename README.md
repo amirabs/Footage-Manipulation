@@ -101,6 +101,13 @@ When run, manually select the points that you want to track.
 #### What does it do?
 Takes in the footage that you have recorded and creates the corresponding stabilized footage. 
 
+### Alternative Stabilize
+Video stablization that smooths the global trajectory using a sliding average window
+```
+Usage: Modify and run the ruby script cv3stab.rb
+```
+
+
 ### Splitting
 This is the splitting software for the footage.
 
