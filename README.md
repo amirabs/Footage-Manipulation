@@ -147,9 +147,8 @@ Must modify the input frames and output frames base directory in the split_frame
 ```
 #### split_frames_wrapper.py
 A wrapper script that calls split_frames.py to split & rescale many videos using a ThreadPool.
-Requires author to generate a split_frames_todo.txt file of the following format:
-frames_directory (x,y) overlap
-e.g: <br />
+Requires author to generate a split_frames_todo.txt file of the following format: <br />
+frames_directory (x,y) overlap <br />
 bookstore4k-09-29-5pu (2,3) 100 <br />
 bookstore4k-09-29-11a40u (2,3) 100 <br />
 bookstore4k-10-5-11a40u (2,2) 200 <br />
